@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>API</h1>
+</body>
+</html>
+
+<script type="module">
+// import { v4 as uuidv4 } from 'uuid';
+
+
+async function getdata(){
+    // console.log(uuidv4());
+    let quizdata=[];
+   await fetch('https://opentdb.com/api.php?amount=20&category=9&type=multiple')
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    let quizdata=[];
+     data.results.map((item,ind)=>{
+        let randomNumber=Math.floor(Math.random() * 4) + 1;
+        // console.log(randomNumber);
+        let tempQues={};
+        tempQues['Question_Id']=ind;
+tempQues["Question_Text"]=item.question;
+tempQues["Correct_Option"]=item.correct_answer;
+if(randomNumber===1){
+tempQues["Option_A"]=item.correct_answer;
+tempQues["Option_B"]=item.incorrect_answers[0];
+tempQues["Option_C"]=item.incorrect_answers[1];
+tempQues["Option_D"]=item.incorrect_answers[2];
+}
+else if(randomNumber===2){
+tempQues["Option_A"]=item.incorrect_answers[0];
+tempQues["Option_B"]=item.correct_answer;
+tempQues["Option_C"]=item.incorrect_answers[1];
+tempQues["Option_D"]=item.incorrect_answers[2];
+}
+else if(randomNumber===3){
+tempQues["Option_A"]=item.incorrect_answers[0];
+tempQues["Option_B"]=item.incorrect_answers[1];
+tempQues["Option_C"]=item.correct_answer;
+tempQues["Option_D"]=item.incorrect_answers[2];
+}
+else if(randomNumber===4){
+tempQues["Option_A"]=item.incorrect_answers[0];
+tempQues["Option_B"]=item.incorrect_answers[1];
+tempQues["Option_C"]=item.incorrect_answers[2]
+tempQues["Option_D"]=item.correct_answer;
+}
+
+quizdata.push(tempQues);
+     })
+     localStorage.setItem('quizdata',JSON.stringify(quizdata));
+//    console.log(quizdata);
+    });
+        
+
+}
+
+getdata();
+
+
+</script>
