@@ -1,0 +1,35 @@
+Benesse India Pvt. Ltd. 
+
+Assignment:- Full Stack Software Engineer 
+
+
+
+Admin Dashboard & Quiz
+
+Requirements:- 
+
+Create a Signup/Login page (ensure login through both the email id or a numeric id and a password)
+
+After the user logs in present him a Quiz from the questions already exiting in database (Having below schema) 
+
+Questions 
+
+Question_Id
+Question_Text
+Option_A
+Option_B
+Option_C
+Option_D
+Correct_Option
+		Once all the questions are attempted by the user, user should click on a submit button which should score the quiz and shows the correct/incorrect answers. 
+
+
+General Considerations 
+
+Choose the coding stack and database as per your liking. 
+Please follow the coding guidelines. 
+Consider any changes in the db schema but on the frontend it should pick questions and options from the database. 
+Make a github repo for the project. 
+Documentation on how to build, deploy and use the application. 
+
+
