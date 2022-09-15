@@ -4,7 +4,6 @@ const {Auth}=require('../../Models/auth');
 const authRouter=Router();
 
 authRouter.post('/signup',async (req,res)=>{
-    console.log(req.body);
     if(req.body.email && req.body.numericId && req.body.firstName && req.body.password){
         let signupData=await new Auth(req.body);
         signupData.save((err)=>{
@@ -76,3 +75,5 @@ authRouter.get('/allusers',async (req,res)=>{
     const usersData= await Auth.find();
     return res.send(usersData);
 })
+
+module.exports=authRouter;

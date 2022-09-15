@@ -1,5 +1,6 @@
 const mongoose=require('mongoose');
 
+// quiz schema
 const quizSchema=mongoose.Schema({
     Question_Id:String,
     Question_Text:String,
@@ -10,6 +11,7 @@ const quizSchema=mongoose.Schema({
     Correct_Option:String
 })
 
+// quiz model
 const Quiz=mongoose.model('quiz',quizSchema);
 
 module.exports=Quiz;

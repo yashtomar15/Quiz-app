@@ -1,6 +1,7 @@
 const { urlencoded } = require('express');
 const express=require('express');
 const authRouter=require('./Routers/Auth/auth.route');
+const quizRouter=require('./Routers/Quiz/quiz.route');
 const connection=require('./db');
 
 const app=express();
@@ -8,7 +9,11 @@ const app=express();
 app.use(urlencoded({extended:true}));
 app.use(express.json());
 
-app.use('/',authRouter);
+// auth middleware
+app.use('/auth',authRouter);
+
+// quiz middleware
+app.use('/quiz',quizRouter);
 
 app.get('/',(req,res)=>{
     res.send("welcome to quiz app");
@@ -16,7 +21,7 @@ app.get('/',(req,res)=>{
 
 const port=process.env.PORT || 8080;
 
-app.listen(8080, async ()=>{
+app.listen(port, async ()=>{
     await connection;
     try{
         console.log('server started at port 8080 and database connected');
