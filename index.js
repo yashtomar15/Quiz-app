@@ -1,11 +1,13 @@
 const { urlencoded } = require('express');
 const express=require('express');
-const authRouter=require('../Routers/Auth/auth.route');
-const quizRouter=require('../Routers/Quiz/quiz.route');
+const authRouter=require('./Routers/Auth/auth.route');
+const quizRouter=require('./Routers/Quiz/quiz.route');
 const connection=require('./db');
+const cors = require('cors')
 
 const app=express();
 
+app.use(cors());
 app.use(urlencoded({extended:true}));
 app.use(express.json());
 

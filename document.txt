@@ -1,0 +1,33 @@
+Backend Api- 
+1. Auth- 
+   1.1 schema for signup- 
+    firstName:{type:String,required:true},
+    lastName:{type:String},
+    email:{type:String,required:true,unique:true},
+    numericId:{type:Number,unique:true,required:true},
+    password:{type:String,required:true},
+    
+   1.2 signup api- 
+       https://quizapp676.herokuapp.com/auth/signup
+   
+   1.3 login api-
+       https://quizapp676.herokuapp.com/auth/login
+
+   1.4 get all users api- 
+       https://quizapp676.herokuapp.com/auth/allusers
+
+2. Quiz- 
+   2.1 schema for posting questions -
+    Question_Id:String,
+    Question_Text:String,
+    Option_A:String,
+    Option_B:String,
+    Option_C:String,
+    Option_D:String,
+    Correct_Option:String
+
+   2.2 Api for getting all questions.
+       https://quizapp676.herokuapp.com/quiz/allquestions
+
+   2.3 Api for posting a question
+       https://quizapp676.herokuapp.com/quiz/addquestion
