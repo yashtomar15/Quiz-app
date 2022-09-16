@@ -1,5 +1,5 @@
 const Router=require('express');
-const Quiz=require('../../Models/quiz');
+const Quiz=require('../../Backend/Models/quiz');
 
 const quizRouter=Router();
 

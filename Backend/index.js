@@ -1,7 +1,7 @@
 const { urlencoded } = require('express');
 const express=require('express');
-const authRouter=require('./Routers/Auth/auth.route');
-const quizRouter=require('./Routers/Quiz/quiz.route');
+const authRouter=require('../Routers/Auth/auth.route');
+const quizRouter=require('../Routers/Quiz/quiz.route');
 const connection=require('./db');
 
 const app=express();
