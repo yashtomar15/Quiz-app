@@ -19,3 +19,7 @@
 ![Screenshot (654)](https://user-images.githubusercontent.com/99667382/190875054-0f995b28-8839-4ad6-887e-fcd0cee81ef6.png)
 <h3 align="center">Quiz starts now</h3>
 
+## 4. Result Page ##
+![Screenshot (660)](https://user-images.githubusercontent.com/99667382/190875545-afc8cd77-efbc-4afd-b863-b04c1964fa3a.png)
+<h3 align="center">In this Page user will get his score</h3>
+
