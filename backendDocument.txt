@@ -33,7 +33,7 @@ Backend Api-
        https://quizapp676.herokuapp.com/quiz/addquestion
 
 
-
+3. Data stored in database.
       [ {"Question_Id":"04f01709-efeb-4d6a-a191-f4f6985e158c","Question_Text":"Where is the train station &quot;Llanfair&shy;pwllgwyngyll&shy;gogery&shy;chwyrn&shy;drobwll&shy;llan&shy;tysilio&shy;gogo&shy;goch&quot;?","Option_A":"Moldova","Option_B":"Czech Republic","Option_C":"Denmark","Option_D":"Wales","Correct_Option":"Wales"},
         {"Question_Id":"d4852176-b239-4988-a563-775c59ff922b","Question_Text":"In past times, what would a gentleman keep in his fob pocket?","Option_A":"Money","Option_B":"Keys","Option_C":"Notebook","Option_D":"Watch","Correct_Option":"Watch"}, 
         {"Question_Id":"93eb4f8e-5664-4514-af6c-2a3e9b450326","Question_Text":"A doctor with a PhD is a doctor of what?","Option_A":"Psychology","Option_B":"Phrenology","Option_C":"Philosophy","Option_D":"Physical Therapy","Correct_Option":"Philosophy"},
@@ -48,5 +48,5 @@ Backend Api-
 
 
 
-for loading ui -- 
+refernce for loading ui -- 
 npm i react-loading-ui
