@@ -69,3 +69,23 @@ npm run build
 ```
 **At this point your website is succesfully deployed**
 
+## Tech stack used in project ##
+**Frontend**
+</br>
+1.HTML
+2.CSS
+3.React JS
+4.Redux
+5.Styled-Components
+</br>
+**Backend**
+1.Node JS
+2.Express JS
+3.Mongodb
+
+**Get in touch**
+<a href="https://www.linkedin.com/in/yashtomar15/">Linkedin</a>
+</br>
+<a href="to:tomaryash15@gmail.com">Email</a>
+
+
