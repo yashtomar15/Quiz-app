@@ -2,7 +2,7 @@
 
 **It is a Quiz application which provides a questions to test your knowledge.**
 </br>
-**for taking a quiz you need to register or login in the website.**
+**for taking a quiz you need to register or login on the website.**
 </br>
 **on successfull login you will redirect to your quiz,**
 **after attemting all questions you need to submit your answers to get your score.**
