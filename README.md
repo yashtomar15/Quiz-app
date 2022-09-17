@@ -1,9 +1,13 @@
 # Quiz-app
 
 **It is a Quiz application which provides a questions to test your knowledge.**
-**for taking a quiz from application you need to register or login if existed user in application.**
+</br>
+**for taking a quiz from application you need to register or login if existed user in application, **
 **on successfull login you will redirect to your quiz.**
 **after attemting all questions you need to submit your answers to get your score.**
+</br>
+</br>
+**Deployed url**
 
 ## 1. Signup Page ##
 ![Screenshot (649)](https://user-images.githubusercontent.com/99667382/190874961-d61fc507-8b19-4944-9f29-7c79962049f6.png)
@@ -27,15 +31,16 @@
 </br>
 
 ## How to build the application? ##
-**first you need to clone the repo by using given command ** 
+
+**first you need to clone the repo by using given command** 
 ```
 git clone https://github.com/yashtomar15/Quiz-app.git
 ```
-** then you nedd to install dependencies by using given command **
+**then you nedd to install dependencies by using given command**
 ```
 npm install
 ```
-**then you can build the application by using given command **
+**then you can build the application by using given command**
 ```
 npm run build
 ```
@@ -45,7 +50,7 @@ npm run build
 </br>
 **Now you can deploy this by using netlify.**
 </br>
-**Netlify is an platform which helps developers to build, test, and deploy websites. By unifying the modern decoupled web elements from local development processes to advanced logics, Netlify is offering an amazingly faster way to ensure much more performant, scalable, and secure websites and applications.**
+*Netlify is an platform which helps developers to build, test, and deploy websites. By unifying the modern decoupled web elements from local development processes to advanced logics, Netlify is offering an amazingly faster way to ensure much more performant, scalable, and secure websites and applications.*
 
 **Steps to deploy by using netlify GUI**
 ```
