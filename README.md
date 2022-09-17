@@ -2,8 +2,9 @@
 
 **It is a Quiz application which provides a questions to test your knowledge.**
 </br>
-**for taking a quiz from application you need to register or login if existed user in application,**
-**on successfull login you will redirect to your quiz.**
+**for taking a quiz you need to register or login in the website.**
+</br>
+**on successfull login you will redirect to your quiz,**
 **after attemting all questions you need to submit your answers to get your score.**
 </br>
 </br>
@@ -57,14 +58,14 @@ npm run build
 1.first you need to create account on netlify
 ```
 ```
-2.then you will find **Add new site** button.
+2.In homepage of website you will find a "Add new site" button.
 >> inside this button you will get an option for deploy manually.
 ```
 ```
-3.then click on deploy manually, it will open a interface.
+3.On clicking on deploy manually, it will open a interface.
 ```
 ```
-4.In this interface you need to drag and drop your build folder which is inside your repository (created on the time of building the app).
+4.In this interface you need to drag and drop your build folder which is inside in your repository (created on the time of building the app).
 ```
 **At this point your website is succesfully deployed**
 
