@@ -2,7 +2,9 @@
 const initstate={
     authstatus:false,
     token:0,
-    questions:[]
+    questions:[],
+    correctCount:0,
+    totalQuestions:0
 }
 
 export const reducer=(state=initstate,{type,payload})=>{
@@ -12,6 +14,12 @@ export const reducer=(state=initstate,{type,payload})=>{
         }
         case "ADD_QUIZ_QUESTIONS":{
             return {...state,questions:payload}
+        }
+        case "SET_CORRECT_ANS_COUNT":{
+            return {...state,correctCount:payload}
+        }
+        case "SET_TOTAL_QUESTIONS":{
+            return {...state,totalQuestions:payload}
         }
         default:{
             return state;

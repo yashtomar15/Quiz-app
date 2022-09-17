@@ -1,7 +1,10 @@
 .textDecoration{
     text-decoration: none;
 }
-
 .alignCenter{
     text-align: center;
+}
+
+.spanMargin{
+    margin-right: 10px;
 }
