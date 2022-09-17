@@ -7,7 +7,7 @@
 
 ## 1. Signup Page ##
 ![Screenshot (649)](https://user-images.githubusercontent.com/99667382/190874961-d61fc507-8b19-4944-9f29-7c79962049f6.png)
-**here user can register** 
+<div align="center" >**here user can register**</div> 
 
 ## 2. Login Page ##
 ![Screenshot (657)](https://user-images.githubusercontent.com/99667382/190874998-8f189771-0bec-4288-9194-7e544f1ca675.png)
