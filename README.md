@@ -73,19 +73,28 @@ npm run build
 **Frontend**
 </br>
 1.HTML
+</br>
 2.CSS
+</br>
 3.React JS
+</br>
 4.Redux
+</br>
 5.Styled-Components
 </br>
 **Backend**
 1.Node JS
+</br>
 2.Express JS
+</br>
 3.Mongodb
 
-**Get in touch**
+**Feel free to connect on**
+</br>
 <a href="https://www.linkedin.com/in/yashtomar15/">Linkedin</a>
 </br>
-<a href="to:tomaryash15@gmail.com">Email</a>
+<a href="mailto:tomaryash15@gmail.com">Email</a>
+</br>
+<a href="https://twitter.com/yashtomar78">Twitter</a>
 
 
