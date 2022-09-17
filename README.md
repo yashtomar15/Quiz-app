@@ -41,17 +41,25 @@ npm run build
 ```
 
 ## How to deploy? ##
-** After building the appplication succesfully.**
+**After building the appplication succesfully.**
 </br>
-** Now you can deploy this by using netlify **
+**Now you can deploy this by using netlify.**
 </br>
-** Netlify is an platform which helps developers to build, test, and deploy websites. By unifying the modern decoupled web elements from local development processes to advanced logics, Netlify is offering an amazingly faster way to ensure much more performant, scalable, and secure websites and applications. **
+**Netlify is an platform which helps developers to build, test, and deploy websites. By unifying the modern decoupled web elements from local development processes to advanced logics, Netlify is offering an amazingly faster way to ensure much more performant, scalable, and secure websites and applications.**
 
-** steps to deploy by using netlify GUI **
+**Steps to deploy by using netlify GUI**
+```
 1.first you need to create account on netlify
+```
+```
 2.then you will find **Add new site** button.
->> inside this button you will get an option for deploy manually
+>> inside this button you will get an option for deploy manually.
+```
+```
 3.then click on deploy manually, it will open a interface.
+```
+```
 4.In this interface you need to drag and drop your build folder which is inside your repository (created on the time of building the app).
-** At this point your website is succesfully deployed**
+```
+**At this point your website is succesfully deployed**
 
