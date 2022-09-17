@@ -9,6 +9,8 @@
 </br>
 </br>
 **Deployed url**
+</br>
+https://quiz-app67.netlify.app/
 
 ## 1. Signup Page ##
 ![Screenshot (649)](https://user-images.githubusercontent.com/99667382/190874961-d61fc507-8b19-4944-9f29-7c79962049f6.png)
