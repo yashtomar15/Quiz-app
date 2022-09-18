@@ -12,9 +12,10 @@
 </br>
 https://quiz-app67.netlify.app/
 </br>
-1.<a href="https://github.com/yashtomar15/Quiz-app#how-to-build-the-application">click here </a> for **How to build?**
 </br>
-2.<a href="https://github.com/yashtomar15/Quiz-app#how-to-deploy">click here for</a> for **How to deploy?**
+1. <a href="https://github.com/yashtomar15/Quiz-app#how-to-build-the-application">click here </a> for **How to build?**
+</br>
+2. <a href="https://github.com/yashtomar15/Quiz-app#how-to-deploy">click here </a> for **How to deploy?**
 </br>
 </br>
 **Usage of application**
