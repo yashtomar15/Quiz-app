@@ -1,9 +1,9 @@
-import React ,{useState} from "react";
+import React ,{useState,useEffect} from "react";
 import { Input , Stack,InputGroup, InputRightElement,Button, useToast} from '@chakra-ui/react'
 import styles from '../stylemodules/generalStyle.module.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate ,useLocation} from "react-router-dom";
 import axios from 'axios'; 
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import {setAuthStatus} from '../store/actions';
 import { LoginCont,Heading } from "../styled/login.styled";
 
@@ -12,11 +12,24 @@ export const Login=()=>{
     const [show, setShow] = useState(false)
     const handleClick = () => setShow(!show)
     const toast=useToast();
-    
+
+    const {authstatus}=useSelector((state)=>state); 
     const dispatch=useDispatch();
     const navigate=useNavigate();
-
+    const location =useLocation();
+    const from=location?.state?.from?.pathname || "/" 
+     
+    useEffect(() => { 
+      if (authstatus) { 
+        navigate(from, { replace: true }); 
+      } 
+      else{ 
+        navigate("/login") 
+      } 
+    }, [authstatus]);
+    
     const handleChange=(e)=>{
+
       setuserDetails({...userdetails,[e.target.name]:e.target.value});
     }
 
@@ -33,16 +46,16 @@ export const Login=()=>{
         return newUserDetails;
     }
     const handleSubmit=(e)=>{
-         console.log(userdetails,"userdetails");
+        //  console.log(userdetails,"userdetails");
         const updatedUserDetails= checkType();
-        console.log(updatedUserDetails);
+        // console.log(updatedUserDetails);
          axios.post('https://quizapp676.herokuapp.com/auth/login',updatedUserDetails)
               .then(({data})=>{
                 console.log(data);
                 if(data && data.status){
                     localStorage.setItem('authstatus', JSON.stringify({status:true,token:data.response._id}))
                     dispatch(setAuthStatus({status:data.status,token:data.response._id}))
-                    navigate('/home');
+                    navigate('/');
                     handleToast(data.message,'success');
                 } 
                 else if(data){

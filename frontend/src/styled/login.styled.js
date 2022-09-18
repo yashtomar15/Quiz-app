@@ -12,7 +12,7 @@ padding:20px;
 export const Heading=styled.h1`
 text-align:center;
 font-family: 'Ubuntu', sans-serif;
-font-size:30px;
+font-size:35px;
 font-weight:700;
 margin-top:40px;
 color:#242d49;

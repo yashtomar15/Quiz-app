@@ -21,14 +21,14 @@ export const Signup=()=>{
     }
 
     const handleSubmit=(e)=>{
-         console.log(userdetails,"userdetails");
+        //  console.log(userdetails,"userdetails");
          axios.post('https://quizapp676.herokuapp.com/auth/signup',userdetails)
               .then(({data})=>{
-                console.log(data);
+                // console.log(data);
                 if(data && data.status){
                     localStorage.setItem('authstatus', JSON.stringify({status:true,token:data.response._id}))
                     dispatch(setAuthStatus({status:data.status,token:data.response._id}))
-                    navigate('/home');
+                    navigate('/');
                     handleToast(data.message,'success');
                 } 
                 else if(data){

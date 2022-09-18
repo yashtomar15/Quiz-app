@@ -8,6 +8,7 @@ import styles from '../stylemodules/generalStyle.module.css';
 import {ImCross} from 'react-icons/im';
 import {BsCheckLg} from 'react-icons/bs';
 import { QuestionText,QuestionsCont,QuestionNum,IconDiv,Pera,Heading } from "../styled/home.styled";
+import {AttentionSeeker} from 'react-awesome-reveal';
 
 export const Home=()=>{
 const[questionNum,setQuestionNum]=useState(0);
@@ -19,8 +20,8 @@ const[isShowD,setIsShowD]=useState(false);
 
 const {questions}=useSelector((state)=>state);
 const {correctCount}=useSelector((state)=>state);
-console.log(questions,'querstions from redux');
-console.log(correctCount,'correctCount from redux');
+// console.log(questions,'querstions from redux');
+// console.log(correctCount,'correctCount from redux');
 const dispatch=useDispatch();
 const navigate=useNavigate();
 const localCorrectCount=JSON.parse(localStorage.getItem('correctCount')) || 0;
@@ -36,7 +37,6 @@ axios.get('https://quizapp676.herokuapp.com/quiz/allquestions')
 .catch(err=>console.log('error occured',err));
 
 dispatch(setCorrectAnsCount(localCorrectCount));
-
 },[])
 
 const handleNext=()=>{
@@ -59,7 +59,11 @@ const handleClick=(optionNum,questions,isCorrect)=>{
     if(questionNum===0 && isCorrect){
         dispatch(setCorrectAnsCount(1));
         localStorage.setItem('correctCount',JSON.stringify(1));
-    } 
+    }
+    else if(questionNum===0 && !isCorrect){
+        dispatch(setCorrectAnsCount(0));
+        localStorage.setItem('correctCount',JSON.stringify(0));
+    }
     else if(isCorrect){
         dispatch(setCorrectAnsCount(correctCount+1));
         localStorage.setItem('correctCount',JSON.stringify(correctCount+1));
@@ -67,27 +71,27 @@ const handleClick=(optionNum,questions,isCorrect)=>{
 
 switch(optionNum){
     case 'A':{
-        console.log(questions[questionNum].Option_A);
+        // console.log(questions[questionNum].Option_A);
         setIsShowA(true);
         return
     }
     case 'B':{
-        console.log(questions[questionNum].Option_B);
+        // console.log(questions[questionNum].Option_B);
         setIsShowB(true);
         return
     }
     case 'C':{
-        console.log(questions[questionNum].Option_C);
+        // console.log(questions[questionNum].Option_C);
         setIsShowC(true);
         return 
     }
     case 'D':{
-        console.log(questions[questionNum].Option_D);
+        // console.log(questions[questionNum].Option_D);
         setIsShowD(true);
         return 
     }
     default:{
-        console.log(questions);
+        // console.log(questions);
         return
     }
 }
@@ -106,7 +110,7 @@ switch(optionNum){
                 (<Pera style={{backgroundColor:'#4da16a'}}><IconDiv className={styles.spanMargin}><BsCheckLg /></IconDiv> <span>{questions[questionNum].Option_A}</span></Pera>)  
             ) : (
                 !isShowA?  (<Pera onClick={()=>handleClick('A',questions,false)}><span className={styles.spanMargin}>A.</span> {questions[questionNum].Option_A}</Pera>) : 
-                (<Pera style={{backgroundColor:'#e53e3e'}}><IconDiv className={styles.spanMargin}><ImCross /></IconDiv> <span>{questions[questionNum].Option_A}</span></Pera>)  
+                (<AttentionSeeker effect="headShake"><Pera style={{backgroundColor:'#e53e3e'}}><IconDiv className={styles.spanMargin}><ImCross /></IconDiv> <span>{questions[questionNum].Option_A}</span></Pera></AttentionSeeker>)  
               )
             }
 
@@ -115,7 +119,7 @@ switch(optionNum){
                 (<Pera style={{backgroundColor:'#4da16a'}}><IconDiv className={styles.spanMargin}><BsCheckLg /></IconDiv> <span>{questions[questionNum].Option_B}</span></Pera>)  
             ) : (
                 !isShowB?  (<Pera onClick={()=>handleClick('B',questions,false)}><span className={styles.spanMargin}>B.</span> {questions[questionNum].Option_B}</Pera>) : 
-                (<Pera style={{backgroundColor:'#e53e3e'}}><IconDiv className={styles.spanMargin}><ImCross /></IconDiv> <span>{questions[questionNum].Option_B}</span></Pera>)  
+                (<AttentionSeeker effect="headShake"><Pera style={{backgroundColor:'#e53e3e'}}><IconDiv className={styles.spanMargin}><ImCross /></IconDiv> <span>{questions[questionNum].Option_B}</span></Pera></AttentionSeeker>)  
               )
             }
 
@@ -124,7 +128,7 @@ switch(optionNum){
                 (<Pera style={{backgroundColor:'#4da16a'}}><IconDiv className={styles.spanMargin}><BsCheckLg /></IconDiv> <span>{questions[questionNum].Option_C}</span></Pera>)  
             ) : (
                 !isShowC?  (<Pera onClick={()=>handleClick('C',questions,false)}><span className={styles.spanMargin}>C.</span> {questions[questionNum].Option_C}</Pera>) : 
-                (<Pera style={{backgroundColor:'#e53e3e'}}><IconDiv className={styles.spanMargin}><ImCross /></IconDiv> <span>{questions[questionNum].Option_C}</span></Pera>)  
+                (<AttentionSeeker effect="headShake"><Pera style={{backgroundColor:'#e53e3e'}}><IconDiv className={styles.spanMargin}><ImCross /></IconDiv> <span>{questions[questionNum].Option_C}</span></Pera></AttentionSeeker>)  
               )
             }
 
@@ -133,14 +137,14 @@ switch(optionNum){
                 (<Pera style={{backgroundColor:'#4da16a'}}><IconDiv className={styles.spanMargin}><BsCheckLg /></IconDiv> <span>{questions[questionNum].Option_D}</span></Pera>)  
             ) : (
                 !isShowD?  (<Pera onClick={()=>handleClick('D',questions,false)}><span className={styles.spanMargin}>D.</span> {questions[questionNum].Option_D}</Pera>) : 
-                (<Pera style={{backgroundColor:'#e53e3e'}}><IconDiv className={styles.spanMargin}><ImCross /></IconDiv> <span>{questions[questionNum].Option_D}</span></Pera>)  
+                (<AttentionSeeker effect="headShake"><Pera style={{backgroundColor:'#e53e3e'}}><IconDiv className={styles.spanMargin}><ImCross /></IconDiv> <span>{questions[questionNum].Option_D}</span></Pera></AttentionSeeker>)  
               )
             }
            
         </div>
-       {!isSubmit ? (<Button onClick={handleNext} color='white' bgColor='#56508c' ml={'80%'} mt="2" h={'9'}>next</Button>) :
-        (<Button onClick={handleSubmit} color='white' bgColor='#56508c' ml={'80%'} mt="2" h={'9'}>Submit</Button>)} 
-        </QuestionsCont>) : (<h1>loading.... ...</h1>)
+       {!isSubmit ? (<Button onClick={handleNext} color='white' bgColor='#56508c' ml={'82%'} mt="2" h={'9'} className={styles.Button}>next</Button>) :
+        (<Button onClick={handleSubmit} color='white' bgColor='#56508c' ml={'82%'} mt="2" h={'9'} className={styles.Button}>Submit</Button>)} 
+        </QuestionsCont>) : (<><h1>loading.... ...</h1></>)
     }
     </>)
 }

@@ -8,3 +8,6 @@
 .spanMargin{
     margin-right: 10px;
 }
+.Button:hover{
+    color:black;
+}

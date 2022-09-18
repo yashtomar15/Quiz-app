@@ -11,7 +11,7 @@ export const Navbar=()=>{
    const toast=useToast();
    const {authstatus}=useSelector((state)=>state);
    const dispatch=useDispatch();
-   console.log(authstatus,"authstatus from redux");
+  //  console.log(authstatus,"authstatus from redux");
    const navigate=useNavigate();
 
    const localStatus=JSON.parse(localStorage.getItem('authstatus'));
@@ -19,33 +19,31 @@ export const Navbar=()=>{
     useEffect( ()=>{
         if(localStatus){
             dispatch(setAuthStatus(localStatus));
-             }
+          }
     },[])
 
     const handleLogout=()=>{
      localStorage.setItem('authstatus',JSON.stringify({status:false,token:0}));
      dispatch(setAuthStatus({status:false,token:0}));
-     navigate('/');
+     navigate('/login');
+     handleToast()
     }
 
-    const handleToast=()=>{
-        toast({
-          title: "First login here",
-          status: 'info',
-          duration: 3000,
-          position:'top',
-          isClosable: true,
-        })
-      }
+const handleToast=()=>{
+    toast({
+      title: "Logged out succesfully",
+      status: 'success',
+      duration: 3000,
+      position:'top',
+      isClosable: true,
+    })
+  }
   
     return (<>
     <NavCont>
-        {authstatus? (<Link to="/home" className={styles.textDecoration}><Pera >Home</Pera></Link>):
-         (<Link to="/" className={styles.textDecoration} onClick={handleToast}><Pera >Home</Pera></Link>)} 
-
-        {!authstatus? (<Link to="/" className={styles.textDecoration}><Pera>Login</Pera></Link>) : 
+        <Link to="/" className={styles.textDecoration}><Pera >Home</Pera></Link>
+        {!authstatus? (<Link to="/login" className={styles.textDecoration}><Pera>Login</Pera></Link>) : 
         (<Pera onClick={handleLogout}>Logout</Pera>)}
-
         {!authstatus && <Link to="/signup" className={styles.textDecoration}><Pera>Signup</Pera></Link>}
     </NavCont>
     </>)
