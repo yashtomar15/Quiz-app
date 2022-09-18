@@ -11,6 +11,13 @@
 **Deployed url**
 </br>
 https://quiz-app67.netlify.app/
+</br>
+<a href="">click here for</a>**How to build?**
+</br>
+<a href="">click here for</a>**How to deploy?**
+</br>
+</br>
+**Usage of application**
 
 ## 1. Signup Page ##
 ![Screenshot (649)](https://user-images.githubusercontent.com/99667382/190874961-d61fc507-8b19-4944-9f29-7c79962049f6.png)
@@ -23,7 +30,7 @@ https://quiz-app67.netlify.app/
 
 
 ## 3. Home/Quiz Page ##
-![Screenshot (654)](https://user-images.githubusercontent.com/99667382/190875054-0f995b28-8839-4ad6-887e-fcd0cee81ef6.png)
+![Screenshot (667)](https://user-images.githubusercontent.com/99667382/190899277-55153f68-13d3-4206-94ec-75d1c5e055ca.png)
 <h3 align="center">Quiz starts now</h3>
 
 ## 4. Result Page ##
